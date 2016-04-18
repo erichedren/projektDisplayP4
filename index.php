@@ -4,6 +4,7 @@
 		<div class="col-8">
 			<?php include 'header.php'; ?>
 		</div>
+		<link rel="stylesheet" type="text/css" href="../css/styles.css">
 	</head>
 	<body>
 		<div class="col-8">

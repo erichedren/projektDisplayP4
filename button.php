@@ -4,15 +4,16 @@
 	</head>
 	<body>
 		<div class="col-12">
-			<div class = "main">
-				<div class="col-3" id = "menu">
-				
-				</div>
-				<p> main </p>
-			</div>
-			<div class = "main-mid">
-				<?php include 'button.php'; ?>
+			<div class = "button" id="on_button">
+				<p class ="button"> On </p>
 			</div>
 		</div>
 	</body>
 </html>
+<?php 
+	if(!extension_loaded('telldus') {
+		dl('telldus' . PHP_SHL_SUFFIX);
+	}
+	
+	$divices = tdGetNumberOfDevices();
+	printf("Devices")

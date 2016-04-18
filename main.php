@@ -1,6 +1,5 @@
 <html>
 	<head>
-		 <link rel="stylesheet" type="text/css" href="../css/styles.css">
 	</head>
 	<body>
 		<div class="col-12">
@@ -10,7 +9,7 @@
 				</div>
 				<p> main </p>
 			</div>
-			<div class = "main-mid">
+			<div class = "col-6" id="main-mid">
 				<?php include 'button.php'; ?>
 			</div>
 		</div>
