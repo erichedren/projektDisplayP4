@@ -1,17 +1,24 @@
 <html>
 	<head>
-		<title>index</title>
-		<div class="col-8">
-			<?php include 'header.php'; ?>
-		</div>
-		<link rel="stylesheet" type="text/css" href="../css/styles.css">
+		<title>Display - Grupp 8</title>
+		<link rel="stylesheet" type="text/css" href="css/styles.css" />
 	</head>
 	<body>
+		<?php echo "!Fungerar det?" ?>
+		<!-- Header -->
 		<div class="col-8">
-			<?php include 'main.php'; ?>
+			<?php include 'php/header.php'; ?>
 		</div>
+		
+		<!-- Main -->
 		<div class="col-8">
-			<?php include 'footer.php'; ?>
+			<?php include 'php/main.php'; ?>
+		</div>
+		
+		<!-- footer -->
+		<div class="col-8">
+			<?php 	echo "hej";
+					include 'php/footer.php'; ?>
 		</div>
 	</body>
 </html>
