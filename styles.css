@@ -36,11 +36,26 @@
 	background-color: rgb(155,155,155);
 	height: 25%;
 }
-#on_button {
-	background-color: rgb(0,255,0);
-	width: 5%;
+.button_on {
+	display: block;
 	height: 5%;
+	width: 75%;
+	background: rgb(0,255,0);
+	border: 2px solid rgba(33, 68, 72, 0.59);
+	color: rgba(0, 0, 0, 0.55);
+	text-align: center;
+	font: bold 5%, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 }
-p.button {
-	color: red;
+.button_off {
+	display: block;
+	height: 5%;
+	width: 75%;
+	background: rgb(255,0,0);
+	border: 2px solid rgba(33, 68, 72, 0.59);
+	color: rgba(0, 0, 0, 0.55);
+	text-align: center;
+	font: bold 5%, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+a {
+ text-decoration: none;
 }

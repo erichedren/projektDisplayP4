@@ -4,7 +4,6 @@
 		<link rel="stylesheet" type="text/css" href="css/styles.css" />
 	</head>
 	<body>
-		<?php echo "!Fungerar det?" ?>
 		<!-- Header -->
 		<div class="col-8">
 			<?php include 'php/header.php'; ?>
@@ -17,8 +16,7 @@
 		
 		<!-- footer -->
 		<div class="col-8">
-			<?php 	echo "hej";
-					include 'php/footer.php'; ?>
+			<?php include 'php/footer.php'; ?>
 		</div>
 	</body>
 </html>

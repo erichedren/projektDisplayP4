@@ -7,7 +7,7 @@
 				<div class="col-3" id = "menu">
 				
 				</div>
-				<p> main </p>
+				<p> Turn the telldus device on or off </p>
 			</div>
 			<div class = "col-6" id="main-mid">
 				<?php include 'button.php'; ?>
