@@ -18,6 +18,8 @@
 		$divices = tdGetNumberOfDevices();
 		printf("Devices: %d\n" + $devices);
 		
+		$allMethods = TELLDUS_TURNON;
+		
 		for ($i = 0; $i < $devices; ++$i) {
 			
 				$id = tdGetDeviceId($i);
