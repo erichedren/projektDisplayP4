@@ -1,0 +1,25 @@
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE `users`
+(
+`user_id` INT(6) AUTO_INCREMENT PRIMARY KEY,
+`username` VARCHAR(25) NOT NULL,
+`password` VARCHAR(25) NOT NULL,
+`email` VARCHAR(55) NOT NULL,
+`firstname` VARCHAR(55) NOT NULL,
+`lastname` VARCHAR(55) NOT NULL
+);
+DROP TABLE IF EXISTS `displayedMessage`;
+CREATE TABLE `displayedMessage`
+(
+`message_id` INT(6) AUTO_INCREMENT PRIMARY KEY,
+`message` VARCHAR(255) NOT NULL,
+`time_start` DATE,
+`time_stop` DATE
+);
+
+INSERT INTO `users` (username,password,email,firstname,lastname) VALUES 
+('ehedren','tellduspass','eric.hedren@gmail.com','Eric','Hedren'),
+('hestr','tellduspass','henkestr@gmail.com','Henrik','Strand'),
+('ricerl','tellduspass','rickard.e94@gmail.com','Rickard','Erlandsson'),
+('joer02','tellduspass','joer02@kth.se','Johan','Eriksson'),
+('rosenkv','tellduspass','rosenkv@kth.se','Daniel','Rosenkvist');
