@@ -62,9 +62,7 @@
             
               echo "$Value";
 
-             $resOn = shell_exec("tdtool --on 2");
-                sleep(1);
-              $resOn = shell_exec("tdtool --dimlevel $V  --dim 2");
+             $resOn = shell_exec("tdtool --dimlevel $Value  --dim 2");
                 sleep(1);
   }
 
