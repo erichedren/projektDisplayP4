@@ -4,14 +4,18 @@
 	<body>
 		<div class="col-12">
 			<div class = "main">
-				<div class="col-3" id = "menu">
-				
+				<div class="col-4" id = "menu">
+				<ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Calender</a></li>
+                </ul>
 				</div>
-				<p> Turn the telldus device on or off </p>
+
 			</div>
-			<div class = "col-6" id="main-mid">
+			<div class = "col-8" id="main-mid">
+                <p> Turn the telldus device on or off </p>
 				<?php include 'button.php'; ?>
 			</div>
-		</div>
 	</body>
 </html>
