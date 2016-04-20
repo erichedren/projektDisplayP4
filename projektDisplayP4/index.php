@@ -15,7 +15,9 @@
 		<link rel="stylesheet" type="text/css" href="resources/css/styles.css" />
 	</head>
 	<body>
-		<?php include 'check_login.php'; ?>
+		<div class = "col-12">
+			<?php include 'check_login.php'; ?>
+		</div>
 	</body>
 </html>
 

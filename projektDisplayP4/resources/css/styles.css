@@ -33,8 +33,10 @@
 
 #menu {
 	background-color: rgb(155,155,155);
-	height: 100%;
+	height: 50%;
     margin-left: -8px;
+	border-radius: 10px;
+	text-align: center;
 }
 
 #menu ul {
@@ -47,14 +49,14 @@
 }
 
 #menu ul a {
-    padding-top: 10px;
+    padding: 3em;
 }
-
 #menu li a {
     display:block;
     color: #000;
     padding-left: 10px;
     text-decoration: none;
+	border-radius: 10px;
 }
 
 #menu li a:hover {
@@ -71,20 +73,22 @@
 	height: 5%;
 	width: 75%;
 	background: rgb(0,255,0);
-	border: 2px solid rgba(33, 68, 72, 0.59);
+	border-radius: 10px;
 	color: rgba(0, 0, 0, 0.55);
 	text-align: center;
 	font: bold 5%, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font-size: 2em;
 }
 .button_off {
 	display: block;
 	height: 5%;
 	width: 75%;
 	background: rgb(255,0,0);
-	border: 2px solid rgba(33, 68, 72, 0.59);
+	border-radius: 10px;
 	color: rgba(0, 0, 0, 0.55);
 	text-align: center;
 	font: bold 5%, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font-size: 2em;
 }
 a {
  text-decoration: none;
@@ -133,4 +137,39 @@ a {
 }
 ::-webkit-input-placeholder {
    color: rgb(0,0,0);
+}
+:-moz-placeholder { /* Firefox 18- */
+   color: red;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: red;  
+}
+
+:-ms-input-placeholder {  
+   color: red;  
+}
+#footer {
+	background-color: rgb(155,155,155);
+	border-radius: 10px;
+	margin-top: 5px;
+	margin-left: -8px;
+}
+#loged_in {
+	background-color: rgb(155,155,155);
+	border-radius: 10px;
+}
+#loged_in input {
+	font-family: "Roboto", sans-serif;
+	outline: 0;
+	background: rgb(50,50,50);
+	width: 25%;
+	border: 0;
+	box-sizing: border-box;
+	font-size: 1em;
+	border-radius: 10px;
+}
+#loged_in input:hover {
+	background-color: #555;
+	color: white;
 }

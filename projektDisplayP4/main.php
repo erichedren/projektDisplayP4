@@ -10,6 +10,7 @@
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Settings</a></li>
                     <li><a href="#">Calender</a></li>
+					<li><?php include projektDisplay_FRAGMENTS.'logged_in.php'; ?></li>
                 </ul>
 				</div>
 
