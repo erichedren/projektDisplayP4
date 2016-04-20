@@ -11,4 +11,7 @@
         public function logIn(Login $login){
             return $this->loginHand->logIn($login);
         } 
+		public function logOut() {
+            $this->loginHand->logOut();
+        }
     }

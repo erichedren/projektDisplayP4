@@ -16,6 +16,9 @@
         echo '<div class="col-8">';
         include projektDisplay_FRAGMENTS.'header.php';
 		echo '</div>';
+		echo '<div class="col-4">';
+        include projektDisplay_FRAGMENTS.'logged_in.php';
+		echo '</div>';
 		echo '<div class="col-8">';
         include 'main.php';
 		echo '</div>';
