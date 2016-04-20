@@ -11,7 +11,6 @@
 [class*="col-"]
 {
     float: left;
-    padding: 10px;
 }
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
@@ -34,8 +33,39 @@
 
 #menu {
 	background-color: rgb(155,155,155);
-	height: 25%;
+	height: 100%;
+    margin-left: -8px;
 }
+
+#menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#menu li {
+    
+}
+
+#menu ul a {
+    padding-top: 10px;
+}
+
+#menu li a {
+    display:block;
+    color: #000;
+    padding-left: 10px;
+    text-decoration: none;
+}
+
+#menu li a:hover {
+    background-color: #555;
+    color: white;
+}
+
+#main-mid {
+    padding-left: 10px;
+}
+
 .button_on {
 	display: block;
 	height: 5%;
