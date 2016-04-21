@@ -1,12 +1,11 @@
 <?php
     namespace projektDisplay\View;
-
+	
     use projektDisplay\util\util;
     use projektDisplay\controller\SessionManager;
-
-    require_once 'classes\projektDisplay\util\util.php';
+    require_once 'classes/projektDisplay/util/util.php';
     util::initRequest();
-    $controller = SessionManager::getController();
+	$controller = SessionManager::getController();
     sessionManager::storeController($controller);
 	?>
 <html>
