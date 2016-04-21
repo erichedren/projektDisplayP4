@@ -4,7 +4,7 @@
     use projektDisplay\model\Login;
     use projektDisplay\util\util;
     
-    require_once 'classes/projektDisplay/util/util.php';
+    require_once 'classes\projektDisplay\util\util.php';
     util::initRequest();
     
     $username = $_POST['username'];
