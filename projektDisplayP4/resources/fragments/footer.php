@@ -14,19 +14,19 @@
 				Group members: <br>
 				</p>
 			</div>
-			<div class ="col-3">
+			<div class ="col-2">
 				<p id="footerTxt">
 				Daniel Rosenkvist: Projektledare <br>
 				Johan Eriksson: Arkitektur
 				</p>
 			</div>
-			<div class ="col-3">
+			<div class ="col-2">
 				<p id="footerTxt">
 				Henrik Strand: Test<br>
 				Rickard Erlandsson: Utveckling
 				</p>
 			</div>
-			<div class ="col-3">
+			<div class ="col-2">
 				<p id="footerTxt">
 				Eric Hedrén: Krav
 				</p>

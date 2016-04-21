@@ -3,10 +3,10 @@
 	</head>
 	<body>
 		<div class="col-3">
-			<a href= "?button_on" class="button_on"><i class="fa fa-play fa-fw"></i> On</a>
+			<a href= "?button_on" class="button_on">On</a>
 		</div>
 		<div class="col-3">
-			<a href= "?button_off" class="button_off"><i class="fa fa-ban fa-fw"></i> Off</a>
+			<a href= "?button_off" class="button_off">Off</a>
 		</div>
 		<div class="col-3">
 			<form action="">
