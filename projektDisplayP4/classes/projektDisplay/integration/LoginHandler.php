@@ -4,16 +4,29 @@
     
     class LoginHandler {
         
-        public function __construct() {
-            include_once 'connection.php';
-        }
+        private $IP;
+		private $db_user;
+		private $db_password;
+		private $db;
+		private $db_path;
+		
+		public function __construct(){
+			$this->IP="127.0.0.1";
+			$this->db_user = "root";
+			$this->db_password = "admin";
+			$this->db = "grupp8";
+		}
         public function logIn(Login $login) {
-            include_once 'connection.php';
             $userName = $login->getUsername();
             $password = $login->getPassword();
-            $query = mysql_query("SELECT*FROM users WHERE username='".$userName."' AND password = '".$password."'" ) or die(mysql_error());
-            $count = mysql_num_rows($query);
-            if($count == 1) {
+			
+			$link = mysqli_connect($this->IP, $this->db_user, $this->db_password, $this->db);
+			$query = ("SELECT*FROM users WHERE username='".$userName."' AND password = '".$password."'");
+			$result = mysqli_num_rows(mysqli_query($link, $query));
+			
+			
+			
+            if($result == 1) {
                 return true;
             }
             else {
@@ -24,15 +37,6 @@
                 $_SESSION = array();
                 session_destroy();
                 header("Location: index.php");
-        }
-        public function createUser($username,$password,$firstname,$lastname,$email) {
-            include_once 'connection.php';
-            $username = $username;
-            $password = password_hash($password, PASSWORD_DEFAULT);
-            $firstname =  $firstname;
-            $lastname = $lastname;
-            $email = $email;
-            mysql_query("insert into users (username,password,firstname,lastname,email,reg_time) values('".$username."','".$password."','".$firstname."','".$lastname."','".$email."',now())") or die(mysql_error());
         }
     }
 
