@@ -2,13 +2,12 @@
 	<body>
 		<p> Turn the telldus device on or off </p>
 		
-		<div class="col-3">
+		<div class="col-5">
 			<a href= "?button_on" class="button_on"><i class="fa fa-play fa-fw"></i> On</a>
-		</div>
-		<div class="col-3">
+			
 			<a href= "?button_off" class="button_off"><i class="fa fa-ban fa-fw"></i> Off</a>
 		</div>
-		<div class="col-3">
+		<div class="col-7">
 		
 			<form action="">
 				<input type="checkbox" name="dim" value="1">DimLevel 1<br>

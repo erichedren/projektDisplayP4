@@ -4,6 +4,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 	</head>
 <body>
+<div class="wrapper" >
 	<!-- Header -->
 	<div class="col-12">
 	<?php include('resources\fragments\header.php'); ?>
@@ -35,8 +36,9 @@
 	</div>
 	
 	<!-- Footer -->
-	<div class="col-12">;
+	<div class="col-12">
 	<?php include('resources\fragments\footer.php'); ?>
 	</div>
+</div>
 </body>
 </html>

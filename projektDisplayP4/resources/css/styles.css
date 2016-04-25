@@ -1,3 +1,9 @@
+body {
+    background-color: #262626;
+    color: white;
+
+}
+
 *
 {
     box-sizing: border-box;
@@ -7,12 +13,6 @@
     content: "";
     clear: both;
     display: block;
-}
-
-body {
-    background-color: #262626;
-    color: white;
-
 }
 
 [class*="col-"]
@@ -31,15 +31,15 @@ body {
 .col-10 {width: 83.33%;}
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
-.col-12:after
-{
-    content: "";
-    clear: both;
-    display: block;
+
+@media only screen and (max-width: 768px) {
+    /* For mobiles: */
+    [class*="col-"] {
+        width: 100%;
+    }
 }
 
 #head{
-    height: 10%;
     border-radius: 5px;
     background-color: limegreen;
 }
@@ -53,7 +53,6 @@ body {
 
 #menu {
     margin-top: 5%;
-    height: 30%;
 	background-color:limegreen;
     text-align: center;
 	border-radius: 10px;
@@ -72,9 +71,6 @@ li {
     margin-left: 5px;
 }
 
-ul a {
-    
-}
 li a {
     font-family: Arial, sans-serif;
     font-size: 1.5em;
@@ -221,7 +217,7 @@ a {
 	font-family: "Roboto", sans-serif;
 	outline: 0;
 	background: red;
-	width: 33%;
+	margin-bottom:10px;
 	border: 0;
 	box-sizing: border-box;
 	font-size: 1em;
