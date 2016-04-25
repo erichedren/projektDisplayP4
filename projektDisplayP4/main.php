@@ -1,25 +1,42 @@
 <html>
-	<head>
+<head>
 		<link rel="stylesheet" type="text/css" href="resources/css/styles.css" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 	</head>
-	<body>
-		<div class="col-12">
-			<div class = "main">
-				<div class="col-2">
-				<ul id="menu">
-                    <li><a href="#"><i class="fa fa-home fa-fw"></i> Home</a></li>
-                    <li><a href="#"><i class="fa fa-cogs fa-fw"></i> Settings</a></li>
-                    <li><a href="#"><i class="fa fa-calendar fa-fw"></i> Calender</a></li>
-					<li><?php include projektDisplay_FRAGMENTS.'logged_in.php'; ?></li>
-                </ul>
-				</div>
-
-			</div>
-			<div class = "col-10" id="main-mid">
-                <p> Turn the telldus device on or off </p>
-				<?php include 'button.php'; ?>
-			</div>
-        </div>    
-	</body>
+<body>
+	<!-- Header -->
+	<div class="col-12">
+	<?php include('resources\fragments\header.php'); ?>
+	</div>
+	
+	<!-- Menu -->
+	<div class="col-2 menu">
+		<?php include('resources\fragments\menu.php'); ?>
+	</div>
+	
+	<!-- Main-content -->
+	<div class="col-7">
+	<?php 
+	
+	$page = $_GET['page'];
+	
+	if($page == ""){
+		include('start.php'); 
+	}
+	else {
+		include($page.".php");
+	}
+	?>
+	</div>
+	
+	<!-- Statusbar -->
+	<div class="col-3 status">
+	Status här
+	</div>
+	
+	<!-- Footer -->
+	<div class="col-12">;
+	<?php include('resources\fragments\footer.php'); ?>
+	</div>
+</body>
 </html>
