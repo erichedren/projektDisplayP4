@@ -145,12 +145,10 @@ a {
  text-decoration: none;
 }
 #login {
-	width: 30%;
-	padding: 1% 0 0;
-	margin: auto;
+	margin: auto 0;
 }
 #loginSub {
-	position: relative;
+	/*position: relative; */
 	z-index: 1;
 	background-color: #FFFFFF;
 	max-width: 75%;

@@ -20,8 +20,8 @@
 		<div class ="col-12">
 			<p class="project_title"> Grupp 8</p>
 		</div>
-		<div class="col-12">
-			<div id="login">
+		<div class="col-4"><br /></div>
+			<div class="col-4" id="login">
 				<form action="login.php" method="post" id="loginSub">
 					<fieldset id="login-inputs">
 						<input name="username" type="text" placeholder="Email adress or Username" required> <br>
@@ -30,6 +30,7 @@
 					</fieldset>
 				</form>	
 			</div>
-		</div>
+		<div class="col-4"><br /></div>
+			
 	</body>
 </html>
