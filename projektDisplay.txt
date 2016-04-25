@@ -8,14 +8,41 @@ CREATE TABLE `users`
 `firstname` VARCHAR(55) NOT NULL,
 `lastname` VARCHAR(55) NOT NULL
 );
+
+DROP TABLE IF EXISTS `messages`;
+CREATE TABLE `messages`
+(
+`m_id` int AUTO_INCREMENT PRIMARY KEY,
+`message` VARCHAR(255) NOT NULL
+);
+
 DROP TABLE IF EXISTS `displayedMessage`;
 CREATE TABLE `displayedMessage`
 (
-`message_id` INT(6) AUTO_INCREMENT PRIMARY KEY,
-`message` VARCHAR(255) NOT NULL,
-`time_start` DATE,
-`time_stop` DATE
+`messageDate_id` AUTO_INCREMENT PRIMARY KEY
+`message_id` INT NOT NULL,
+`time_start` DATE NOT NULL,
+`time_stop` DATE NOT NULL,
+FOREIGN KEY(`message_id`) REFERENCES `messages`(`m_id`)
 );
+
+INSERT INTO `messages` (message) VALUES
+('Möte'),
+('Kontor'),
+('Läkarbesök'),
+('På väg hem'),
+('Hemma'),
+('Ledig'),
+('På lunch'),
+('Utomlans'),
+('På Landet'),
+('Fikarummet'),
+('Föreläsning sal A'),
+('Föreläsning sal B'),
+('Föreläsning sal C'),
+('Föreläsning sal 211'),
+('Föreläsning sal 208'),
+('Föreläsning sal 310');
 
 INSERT INTO `users` (username,password,email,firstname,lastname) VALUES 
 ('ehedren','tellduspass','eric.hedren@gmail.com','Eric','Hedren'),
