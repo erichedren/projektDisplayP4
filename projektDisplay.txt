@@ -19,7 +19,7 @@ CREATE TABLE `messages`
 DROP TABLE IF EXISTS `displayedMessage`;
 CREATE TABLE `displayedMessage`
 (
-`messageDate_id` AUTO_INCREMENT PRIMARY KEY
+`messageDate_id` INT AUTO_INCREMENT PRIMARY KEY,
 `message_id` INT NOT NULL,
 `time_start` DATE NOT NULL,
 `time_stop` DATE NOT NULL,
