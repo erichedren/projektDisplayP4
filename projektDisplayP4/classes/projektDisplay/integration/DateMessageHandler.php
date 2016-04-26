@@ -1,6 +1,5 @@
 <?php
     namespace projektDisplay\integration;
-    use projektDisplay\model\Login;
     
     class DateMessageHandler {
         
@@ -17,13 +16,9 @@
 			$this->db = "grupp8";
 		}
         public function addMessage($messageId,$dateStart,$dateStop) {
-			/*
-			$link = mysqli_connect($this->IP, $this->db_user, $this->db_password, $this->db) or die(mysql_error);
-			$queryId = ("SELECT message FROM messages WHERE m_id ='"$messageId"';");
-			$row = mysqli_fetch_row(mysqli_query($link,$queryId);
-			$queryMess = ("INSERT INTO displayedMessage (message,time_start,time_stop) VALUES ('"$row"','"$dateStart"','"$dateStop"');");
-			$result = mysqli_query($link, $query) or die(mysqli_error);
-        */
+			$link = mysqli_connect($this->IP, $this->db_user, $this->db_password, $this->db) or die(mysql_error());
+			$queryMess = ("INSERT INTO displayedMessage (message_id,time_start,time_stop) VALUES ('".$messageId."','".$dateStart."','".$dateStop."');");
+			$result = mysqli_query($link, $queryMess) or die(mysql_error());
 		}
     }
 
