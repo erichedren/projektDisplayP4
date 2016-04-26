@@ -1,3 +1,9 @@
+body {
+    background-color: #262626;
+    color: white;
+
+}
+
 *
 {
     box-sizing: border-box;
@@ -7,10 +13,6 @@
     content: "";
     clear: both;
     display: block;
-}
-
-body {
-
 }
 
 [class*="col-"]
@@ -29,23 +31,30 @@ body {
 .col-10 {width: 83.33%;}
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
-.col-12:after
-{
-    content: "";
-    clear: both;
-    display: block;
+
+@media only screen and (max-width: 768px) {
+    /* For mobiles: */
+    [class*="col-"] {
+        width: 100%;
+    }
 }
 
 #head{
-    height: 15%;
-    color: deepskyblue;
+    border-radius: 5px;
+    background-color: limegreen;
+}
+
+#title  {
+    font-size: 35px;
+    font-family: 'Raleway', Helvetica, Arial, sans-serif;
+    margin-left: 10px;
+    margin-top: 5px;
 }
 
 #menu {
-	background-color:deepskyblue;
-    margin-left: -4%;
+    margin-top: 5%;
+	background-color:limegreen;
     text-align: center;
-	height: 100%;
 	border-radius: 10px;
 	text-align: left;
     list-style: none;
@@ -59,13 +68,11 @@ ul {
 }
 li {
     align-content: left;
+    margin-left: 5px;
 }
 
-ul a {
-    
-}
 li a {
-    font-family:monospace;
+    font-family: Arial, sans-serif;
     font-size: 1.5em;
     display:block;
     color: #000;
@@ -78,8 +85,8 @@ li a:hover {
     color: white;
 }
 
-#main-mid {
-    padding-left: 10px;
+.main{
+	padding:5px;
 }
 
 .button_off {
@@ -138,12 +145,10 @@ a {
  text-decoration: none;
 }
 #login {
-	width: 30%;
-	padding: 1% 0 0;
-	margin: auto;
+	margin: auto 0;
 }
 #loginSub {
-	position: relative;
+	/*position: relative; */
 	z-index: 1;
 	background-color: #FFFFFF;
 	max-width: 75%;
@@ -194,11 +199,10 @@ a {
    color: red;  
 }
 #footer {
-	background-color:deepskyblue;
+	background-color:limegreen;
     color: #000;
 	border-radius: 10px;
 	margin-top: 5px;
-	margin-left: -8px;
 }
 #footerTxt{
     margin-left: 10px;
@@ -211,7 +215,7 @@ a {
 	font-family: "Roboto", sans-serif;
 	outline: 0;
 	background: red;
-	width: 33%;
+	margin-bottom:10px;
 	border: 0;
 	box-sizing: border-box;
 	font-size: 1em;
