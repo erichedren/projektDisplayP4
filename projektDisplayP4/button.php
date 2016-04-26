@@ -1,7 +1,9 @@
-
 <?php 
-    $controller = SessionManager::getController();
-    sessionManager::storeController($controller);
+	namespace projektDisplay\View;
+    use projektDisplay\controller\SessionManager;
+    use projektDisplay\model\Login;
+    use projektDisplay\util\util;
+	
 	if (isset($_GET['button_on'])){
 		button_on();
 	}
@@ -31,7 +33,9 @@
             echo "$Value";
             $resOn = shell_exec("tdtool --dimlevel $Value  --dim 2");
             sleep(1);
+			$controller = SessionManager::getController();
 			$controller->addMessage($V,$start,$stop);
+			SessionManager::storeController($controller);
 			
   }
 ?>
