@@ -85,8 +85,8 @@ li a:hover {
     color: white;
 }
 
-#main-mid {
-    padding-left: 10px;
+.main{
+	padding:5px;
 }
 
 .button_off {
