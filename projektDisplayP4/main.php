@@ -16,23 +16,24 @@
 	</div>
 	
 	<!-- Main-content -->
-	<div class="col-7">
+	<div class="col-7 main">
 	<?php 
-	
-	$page = $_GET['page'];
-	
-	if($page == ""){
-		include('start.php'); 
-	}
-	else {
-		include($page.".php");
-	}
+		
+		//Include page
+		$page = $_GET['page'];
+		
+		if($page == ""){
+			include('start.php'); 
+		}
+		else {
+			include($page.".php");
+		}
 	?>
 	</div>
 	
 	<!-- Statusbar -->
 	<div class="col-3 status">
-	Status här
+	<?php include('status.php'); ?>
 	</div>
 	
 	<!-- Footer -->
