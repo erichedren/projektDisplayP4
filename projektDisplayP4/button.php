@@ -10,9 +10,16 @@
 	if (isset($_GET['button_off'])){
 		button_off();
 	}
-	if (isset($_GET['formSubmit'])){
-		dim($Value = $_GET['dim'],$start = $_GET['start'], $stop = $_GET['stop']);
+	if (isset($_GET['formSubmit']) && !$_GET['start'] && !$_GET['stop']){
+		echo "Dim-nivå med tidpunkt sparas!";
+		sendMessage($value = $_GET['dim']);
 	}
+	if (isset($_GET['formSubmit']) && isset($_GET['start']) && isset($_GET['stop'])) {
+		echo "Dim-nivå med start och slutdatum sparas!";
+		sendMessageWithDate($Value = $_GET['dim'],$start = $_GET['start'], $stop = $_GET['stop']);
+	}
+	
+	//Functions
 	function button_on() {
 			echo " * TurnedOn\n";
 			$resOn = shell_exec("tdtool --on 2");
@@ -27,15 +34,31 @@
 			$resOf = shell_exec("tdtool --off 2");
 				sleep(1);		
 	}
-    function dim($V,$start,$stop){
+	function sendMessage($V){
+		$Value = $V * 15;
+		echo "$Value";
+		$resOn = shell_exec("tdtool --dimlevel $Value  --dim 2");
+		sleep(1);
+		$controller = SessionManager::getController();
+		$result = $controller->getMessage($V);
+		echo "Result: ".$result;
+		$controller->addMessage($result);
+		SessionManager::storeController($controller);
+		
+		echo "DONE!";
+		
+	}
+    function sendMessageWithDate($V,$start,$stop){
             $Value = $V * 15;
             
             echo "$Value";
             $resOn = shell_exec("tdtool --dimlevel $Value  --dim 2");
             sleep(1);
 			$controller = SessionManager::getController();
-			$controller->addMessage($V,$start,$stop);
+			$result = $controller->getMessage($V);
+			echo "Result: ".$result;
+			$controller->addMessageWithDate($result, $start, $start);
 			SessionManager::storeController($controller);
 			
-  }
+  } 
 ?>

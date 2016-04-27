@@ -27,8 +27,8 @@
 					<input type="checkbox" name="dim" value="14">DimLevel 14 <br>
 					<input type="checkbox" name="dim" value="15">DimLevel 15 <br>
 					<input type="checkbox" name="dim" value="16">DimLevel 16 <br>
-					<input type="date" name="start" required>Start date <br>
-					<input type="date" name="stop" required>Stop date <br>
+					<input type="date" name="start">Start date <br>
+					<input type="date" name="stop">Stop date <br>
 					<input type="submit" name="formSubmit" value="Submit" />
 				</form>
 			</fieldset>			
