@@ -23,7 +23,7 @@ CREATE TABLE `displayedMessage`
 `message` VARCHAR(255) NOT NULL,
 `time_start` DATE,
 `time_stop` DATE,
-`date` TIMESPAMP NOT NULL
+`date` DATETIME NOT NULL
 );
 
 INSERT INTO `messages` (message) VALUES
