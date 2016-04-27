@@ -20,10 +20,10 @@ DROP TABLE IF EXISTS `displayedMessage`;
 CREATE TABLE `displayedMessage`
 (
 `messageDate_id` INT AUTO_INCREMENT PRIMARY KEY,
-`message_id` INT NOT NULL,
+`message` VARCHAR(255) NOT NULL,
 `time_start` DATE NOT NULL,
 `time_stop` DATE NOT NULL,
-FOREIGN KEY(`message_id`) REFERENCES `messages`(`m_id`)
+`date` DATE NOT NULL
 );
 
 INSERT INTO `messages` (message) VALUES
