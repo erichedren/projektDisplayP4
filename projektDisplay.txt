@@ -21,8 +21,8 @@ CREATE TABLE `displayedMessage`
 (
 `messageDate_id` INT AUTO_INCREMENT PRIMARY KEY,
 `message` VARCHAR(255) NOT NULL,
-`time_start` DATE NOT NULL,
-`time_stop` DATE NOT NULL,
+`time_start` DATE,
+`time_stop` DATE,
 `date` DATE NOT NULL
 );
 
