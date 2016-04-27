@@ -12,7 +12,7 @@
 		public function __construct(){
 			$this->IP="127.0.0.1";
 			$this->db_user = "root";
-			$this->db_password = "pass";
+			$this->db_password = "grupp8";
 			$this->db = "grupp8";
 		}
         public function addMessage($messageId,$dateStart,$dateStop) {

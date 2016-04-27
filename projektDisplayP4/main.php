@@ -7,12 +7,12 @@
 <div class="wrapper" >
 	<!-- Header -->
 	<div class="col-12">
-	<?php include('resources\fragments\header.php'); ?>
+	<?php include('resources/fragments/header.php'); ?>
 	</div>
 	
 	<!-- Menu -->
 	<div class="col-2 menu">
-		<?php include('resources\fragments\menu.php'); ?>
+		<?php include('resources/fragments/menu.php'); ?>
 	</div>
 	
 	<!-- Main-content -->
@@ -38,7 +38,7 @@
 	
 	<!-- Footer -->
 	<div class="col-12">
-	<?php include('resources\fragments\footer.php'); ?>
+	<?php include('resources/fragments/footer.php'); ?>
 	</div>
 </div>
 </body>
