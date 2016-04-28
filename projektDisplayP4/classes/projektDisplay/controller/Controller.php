@@ -33,4 +33,7 @@
 		public function getMessage($V){
 			return $this->dateMessageHand->getMessage($V);
 		}
+		public function displayGetMessage() {
+			return $this->dateMessageHand->displayGetMessage();
+		}
     }
