@@ -34,5 +34,14 @@
 			$queryMess = ("INSERT INTO displayedMessage (message, date) VALUES ('".$message."', NOW())");
 			$result = mysqli_query($link, $queryMess) or die(mysqli_error($link));
 		}
+		public function displayGetMessage() {
+			$link = mysqli_connect($this->IP, $this->db_user, $this->db_password, $this->db);
+			$query = ("SELECT message FROM displayedmessage ORDER BY date DESC");
+			$result = mysqli_fetch_row(mysqli_query($link, $query)) or die(mysqli_error($link));
+			return $result[0];
+			/*
+			SELECT message FROM displayedMessage ORDER BY date DESC
+			*/
+		}
     }
 
