@@ -22,7 +22,7 @@
 			
 			$link = mysqli_connect($this->IP, $this->db_user, $this->db_password, $this->db) or die(mysql_error);
 			$query = ("SELECT*FROM users WHERE username='".$userName."' AND password = '".$password."'");
-			$result = mysqli_num_rows(mysqli_query($link, $query)) or die(mysqli_error($link));
+			$result = mysqli_num_rows(mysqli_query($link, $query));
 			
             if($result == 1) {
                 return true;
