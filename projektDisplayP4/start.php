@@ -22,7 +22,7 @@
 					$controller = SessionManager::getController();
 					for($i = 1; $i<17; $i++){
 						$message = $controller->getMessage($i);
-						echo "<input type='radio' name='dim' value=".$i.">".$message."<br>";
+						echo "<input type='radio' name='dim' value=".$i." required>".$message."<br>";
 					}
 					SessionManager::storeController($controller);
 				?>
