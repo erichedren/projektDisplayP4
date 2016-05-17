@@ -1,47 +1,25 @@
-<html>
-	<head>
-	</head>
-	<body>
-		<div class="col-3">
-			<a href= "?button_on" class="button_on"><i class="fa fa-play fa-fw"></i> On</a>
-		</div>
-		<div class="col-3">
-			<a href= "?button_off" class="button_off"><i class="fa fa-ban fa-fw"></i> Off</a>
-		</div>
-		<div class="col-3">
-			<form action="">
-				<input type="checkbox" name="dim" value="1">DimLevel 1<br>
-				<input type="checkbox" name="dim" value="2">DimLevel 2 <br>
-                <input type="checkbox" name="dim" value="3">DimLevel 3<br>
-				<input type="checkbox" name="dim" value="4">DimLevel 4 <br>
-                <input type="checkbox" name="dim" value="5">DimLevel 5 <br>
-                <input type="checkbox" name="dim" value="6">DimLevel 6 <br>
-                <input type="checkbox" name="dim" value="7">DimLevel 7 <br>
-                <input type="checkbox" name="dim" value="8">DimLevel 8 <br>
-                <input type="checkbox" name="dim" value="9">DimLevel 9 <br>
-                <input type="checkbox" name="dim" value="10">DimLevel 10 <br>
-                <input type="checkbox" name="dim" value="11">DimLevel 11 <br>
-                <input type="checkbox" name="dim" value="12">DimLevel 12 <br>
-                <input type="checkbox" name="dim" value="13">DimLevel 13 <br>
-                <input type="checkbox" name="dim" value="14">DimLevel 14 <br>
-                <input type="checkbox" name="dim" value="15">DimLevel 15 <br>
-                <input type="checkbox" name="dim" value="16">DimLevel 16 <br>
-                <input type="submit" name="formSubmit" value="Submit" />
-			</form>
-		</div>
-	</body>
-</html>
 <?php 
-    
+	namespace projektDisplay\View;
+    use projektDisplay\controller\SessionManager;
+    use projektDisplay\model\Login;
+    use projektDisplay\util\util;
+	
 	if (isset($_GET['button_on'])){
 		button_on();
 	}
 	if (isset($_GET['button_off'])){
 		button_off();
 	}
-	if (isset($_GET['formSubmit'])){
-		dim($Value = $_GET['dim']);
+	if (isset($_GET['formSubmit']) && !$_GET['start'] && !$_GET['stop']){
+		echo "Dim-nivå med tidpunkt sparas!";
+		sendMessage($value = $_GET['dim']);
 	}
+	if (isset($_GET['formSubmit']) && isset($_GET['start']) && isset($_GET['stop'])) {
+		echo "Dim-nivå med start och slutdatum sparas!";
+		sendMessageWithDate($Value = $_GET['dim'],$start = $_GET['start'], $stop = $_GET['stop']);
+	}
+	
+	//Functions
 	function button_on() {
 			echo " * TurnedOn\n";
 			$resOn = shell_exec("tdtool --on 2");
@@ -56,11 +34,75 @@
 			$resOf = shell_exec("tdtool --off 2");
 				sleep(1);		
 	}
-    function dim($V){
-              $Value = $V * 15;
+	function sendMessage($V){
+		$Value = $V * 15;
+		echo "$Value";
+		//$resOn = shell_exec("tdtool --dimlevel $Value  --dim 2");
+		//sleep(1);
+		
+		if($V == 1){
+			$resOn = shell_exec("tdtool --on 2");
+			sleep(2);
+			$resOn = shell_exec("tdtool --off 2");
+		}
+		elseif($V == 2){
+			$resOn = shell_exec("tdtool --on 2");
+			sleep(2);
+			$resOn = shell_exec("tdtool --off 2");
+			sleep(40);
+			$resOn = shell_exec("tdtool --on 2");
+			
+			
+			//Stäng av
+			sleep(20);
+			$resOn = shell_exec("tdtool --off 2");
+		}
+		elseif($V == 3){
+			$resOn = shell_exec("tdtool --on 2");
+			sleep(20);
+			//$resOn = shell_exec("tdtool --on 2");
+			sleep(20);
+			$resOn = shell_exec("tdtool --off 2");
+			
+			
+			//Stäng av
+			sleep(22);
+			$resOn = shell_exec("tdtool --off 2");
+		}
+		elseif($V == 4){
+			$resOn = shell_exec("tdtool --on 2");
+			sleep(20);
+			//$resOn = shell_exec("tdtool --off 2");
+			sleep(20);
+			//$resOn = shell_exec("tdtool --on 2");
+			
+			
+			//Stäng av
+			sleep(22);
+			$resOn = shell_exec("tdtool --off 2");
+		}
+		
+		
+		$controller = SessionManager::getController();
+		$result = $controller->getMessage($V);
+		echo "Result: ".$result;
+		$controller->addMessage($result);
+		SessionManager::storeController($controller);
+		
+		echo "DONE!";
+		
+	}
+    function sendMessageWithDate($V,$start,$stop){
+            $Value = $V * 15;
             
-              echo "$Value";
-             $resOn = shell_exec("tdtool --dimlevel $Value  --dim 2");
-                sleep(1);
-  }
+            echo "$Value";
+            $resOn = shell_exec("tdtool --dimlevel $Value  --dim 2");
+            sleep(1);
+			$controller = SessionManager::getController();
+			$result = $controller->getMessage($V);
+			echo "Result: ".$result;
+			$controller->addMessageWithDate($result, $start, $start);
+			SessionManager::storeController($controller);
+			
+  } 
 ?>

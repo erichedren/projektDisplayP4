@@ -13,13 +13,5 @@
     }
     else
     {
-        echo '<div class="col-12">';
-        include projektDisplay_FRAGMENTS.'header.php';
-		echo '</div>';
-		echo '<div class="col-12">';
-        include 'main.php';
-		echo '</div>';
-		echo '<div class="col-12">';
-        include projektDisplay_FRAGMENTS.'footer.php';
-		echo '</div>';
+        include('main.php');
     }

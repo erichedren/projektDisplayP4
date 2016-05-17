@@ -40,15 +40,14 @@ body {
 }
 
 #head{
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: limegreen;
 }
 
 #title  {
     font-size: 35px;
     font-family: 'Raleway', Helvetica, Arial, sans-serif;
-    margin-left: 10px;
-    margin-top: 5px;
+    margin: 10px 0px 10px 10px;
 }
 
 #menu {

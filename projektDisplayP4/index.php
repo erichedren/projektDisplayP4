@@ -12,6 +12,7 @@
 	<head>
 		<title>Display - Grupp 8</title>
 		<link rel="stylesheet" type="text/css" href="resources/css/styles.css" />
+		<link href='http://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
 		<div class = "col-12">
