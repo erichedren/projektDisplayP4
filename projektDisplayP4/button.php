@@ -41,35 +41,35 @@
 		//sleep(1);
 		
 		if($V == 1){
+			//00
 			$resOn = shell_exec("tdtool --on 2");
-			sleep(2);
+			sleep(1);
 			$resOn = shell_exec("tdtool --off 2");
 		}
 		elseif($V == 2){
+			//01
 			$resOn = shell_exec("tdtool --on 2");
-			sleep(2);
+			sleep(1);
 			$resOn = shell_exec("tdtool --off 2");
-			sleep(40);
+			sleep(34);
 			$resOn = shell_exec("tdtool --on 2");
 			
 			
 			//Stäng av
-			sleep(20);
+			sleep(28);
 			$resOn = shell_exec("tdtool --off 2");
 		}
 		elseif($V == 3){
+			//10
 			$resOn = shell_exec("tdtool --on 2");
-			sleep(20);
+			sleep(30);
 			//$resOn = shell_exec("tdtool --on 2");
-			sleep(20);
+			sleep(2);
 			$resOn = shell_exec("tdtool --off 2");
 			
-			
-			//Stäng av
-			sleep(22);
-			$resOn = shell_exec("tdtool --off 2");
 		}
 		elseif($V == 4){
+			//11
 			$resOn = shell_exec("tdtool --on 2");
 			sleep(20);
 			//$resOn = shell_exec("tdtool --off 2");
